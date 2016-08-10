@@ -9,7 +9,7 @@ deploy:
   api_key:
     secure: TgyuF/ib44HbEOr04onij/S1xQXXoqvbkmbgPxMqQ2BPUAVHp10NEw2WU56MRUdobqEhzy8Os/IuUuY8C8vtW9/iTLr8ddoOw0szXFHNt2P8C0zY+VZMYjZ/8mATH+G2oS2JtCBnIJ62quy5CCS1y3MZs/6OIpsEwpgHuW0IMH+4mNd7MdI/nKMKmfbbv1jCLtwb+m/SWfPyZdZKFwZUs57psa+kHsDlo1KTd0DfCpFlnjEFrGnti/wj1j5EDJ7ZUG8KFydIpk0TudYX4dgmo77fDscSdM88jYNiQWNDhohhrGMA7Zc8n3IGeWCt3yU5xQiTywd9SDU6ZDg3kIp2wprbZAN0hDkDi72oZqWQKHDFBzaiKb+D91YtyPa1/mFhO4w4ANH6PaNFuWqPlOOP3NVSm1bdEDoGCSs+89T1i9whH6xdGSFVgOcuJ4Gbu5vIsZG5JYsKc62pWKoe2zmBpcJ2caIJ1dUlPNEXw9RXgEup6Ome73w92a83vadCG7USU3+dXoEfaMlw6ruWSI1nWBgl9R2nJmeYEcIaiLoH8AtTFMGwj+ya6qp5OaAPyqXJWa6F7Cuv7N1gfahM1GS46llqIsgkXMTdgQXhJ8CedyAdsdgaJLUggasAukJQ3m6pZeLI19wF20E09FaZVgxS2/0ZxPpz9OJAUAAR4ePG4uI=
   file_glob: true
-  file: "signature-*.jar"
+  file: "target/signature-*.jar"
   skip_cleanup: true
   on:
     tags: true
