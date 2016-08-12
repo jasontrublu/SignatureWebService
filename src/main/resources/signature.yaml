@@ -1,9 +1,7 @@
 defaultName: signatureService
 
 server:
-  applicationConnectors:
-  - type: http
+  type: simple
+  connector:
+    type: http
     port: 8280
-  adminConnectors:
-  - type: http
-    port: 8281
