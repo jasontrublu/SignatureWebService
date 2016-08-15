@@ -15,8 +15,7 @@ class SignatureResourceSpec extends Specification {
     public static final DropwizardTestSupport<SignatureConfiguration> SUPPORT =
             new DropwizardTestSupport<SignatureConfiguration>(SignatureApplication.class,
                     ResourceHelpers.resourceFilePath("signature.yaml"),
-                    ConfigOverride.config("server.applicationConnectors[0].port", "0"),
-                    ConfigOverride.config("server.adminConnectors[0].port", "0")
+                    ConfigOverride.config("server.connector.port", "0")
             );
 
     def setup() {
@@ -27,7 +26,7 @@ class SignatureResourceSpec extends Specification {
         setup:
             def client = new RESTClient("http://localhost:" +  SUPPORT.getLocalPort())
         when:
-            def response = client.get(path: "/signature") as HttpResponseDecorator
+            def response = client.get(path: "/application/signature") as HttpResponseDecorator
         then:
             response.status == 200
             response.contentType == ContentType.JSON.toString()
@@ -38,7 +37,7 @@ class SignatureResourceSpec extends Specification {
         setup:
             def client = new RESTClient("http://localhost:" +  SUPPORT.getAdminPort())
         when:
-            def response = client.get(path: "/healthcheck") as HttpResponseDecorator
+            def response = client.get(path: "/admin/healthcheck") as HttpResponseDecorator
         then:
             response.status == 200
             response.contentType == ContentType.JSON.toString()
