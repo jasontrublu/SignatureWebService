@@ -1,5 +1,5 @@
 package de.trublu.signature.domain;
 
 public interface SignatureService {
-    String get();
+    String get(Long id);
 }
